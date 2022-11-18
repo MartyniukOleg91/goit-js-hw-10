@@ -47,7 +47,14 @@ button {
   margin: -89px auto 0 auto;
   background-color: rgb(19, 171, 231);
   opacity: 95%;
-  border-radius: 10%;
+  border-radius: 20%;
+}
+
+.country-list {
+  position: absolute;
+
+  opacity: 95%;
+  border-radius: 20%;
 }
 
 #cover {

@@ -21,7 +21,7 @@ inputSearch.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 function onSearch (e) {
     e.preventDefault();
 let search = inputSearch.value;
-// console.log('search: ',search);
+
 if(search.trim() === "") {
     countryList.innerHTML = "";
     countryInfo.innerHTML = "";
