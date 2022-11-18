@@ -37,9 +37,22 @@ button {
   opacity: 100%;
 }
 
+.country-info {
+  position: absolute;
+  top: 55%;
+  left: 10;
+  right: 0;
+  width: 350px;
+  padding: 39px;
+  margin: -89px auto 0 auto;
+  background-color: rgb(19, 171, 231);
+  opacity: 95%;
+  border-radius: 10%;
+}
+
 #cover {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
   right: 0;
   width: 550px;
