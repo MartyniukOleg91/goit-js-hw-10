@@ -34,6 +34,7 @@ button {
   margin: 0;
   border: 0;
   background-color: transparent;
+  opacity: 100%;
 }
 
 #cover {
@@ -46,8 +47,9 @@ button {
   margin: -83px auto 0 auto;
   background-color: #2e14a1;
   border-radius: 20px;
-  box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+  box-shadow: 0 10px 40px #3139aa, 0 0 0 20px #ffffffeb;
   transform: scale(0.6);
+  opacity: 80%;
 }
 
 form {
