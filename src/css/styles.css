@@ -46,7 +46,7 @@ button {
   padding: 39px;
   margin: -89px auto 0 auto;
   background-color: rgb(19, 171, 231);
-
+  box-shadow: 0 10px 40px #3139aa, 0 0 0 20px #ffffffeb;
   border-radius: 20%;
 }
 
@@ -55,9 +55,9 @@ button {
 
   left: 10;
   right: 0;
-  width: 350px;
+  width: 300px;
   padding: 39px;
-
+  box-shadow: 0 10px 40px #3139aa, 0 0 0 20px #ffffffeb;
   background-color: aqua;
   opacity: 95%;
   border-radius: 20%;
