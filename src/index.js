@@ -32,7 +32,7 @@ if(search.trim() === "") {
 fetchCountries(search.trim())
 .then(countries => {
     // console.log(countries);
-    if(countries.length > 10) {
+    if(countries.length > 20) {
         Notify.info('Too many matches found. Please enter a more specific name.');
         countryList.innerHTML = "";
         countryInfo.innerHTML = "";
@@ -53,7 +53,7 @@ fetchCountries(search.trim())
 })
     
 .catch(error => {
-    Notify.failure('Oops, there is no country with that name');
+    Notify.failure('УПС ЗБІГІВ НЕМАЄ )))');
     countryList.innerHTML = "";
     countryInfo.innerHTML = "";
     return error;
