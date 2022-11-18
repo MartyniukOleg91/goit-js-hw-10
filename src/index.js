@@ -32,7 +32,7 @@ if(search.trim() === "") {
 fetchCountries(search.trim())
 .then(countries => {
     // console.log(countries);
-    if(countries.length > 20) {
+    if(countries.length > 30) {
         Notify.info('Too many matches found. Please enter a more specific name.');
         countryList.innerHTML = "";
         countryInfo.innerHTML = "";
