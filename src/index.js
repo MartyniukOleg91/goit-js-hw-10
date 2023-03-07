@@ -16,46 +16,50 @@ const refs = {
 
 inputSearch.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
-
+const clearMarkAp = function () { 
+    countryList.innerHTML = "";
+    countryInfo.innerHTML = "";
+   
+}
 
 function onSearch (e) {
     e.preventDefault();
-let search = inputSearch.value;
 
-if(search.trim() === "") {
-    countryList.innerHTML = "";
-    countryInfo.innerHTML = "";
+let search = (e.target.value).trim();
+
+if(!search) {
+    
+    clearMarkAp();
     return;
 }
     
     
-fetchCountries(search.trim())
+fetchCountries(search)
 .then(countries => {
     // console.log(countries);
-    if(countries.length > 30) {
+    if(countries.length > 10) {
         Notify.info('Too many matches found. Please enter a more specific name.');
-        countryList.innerHTML = "";
-        countryInfo.innerHTML = "";
+         clearMarkAp();
         return;
     }
 
     if(countries.length > 1  && countries.length <= 10) {
-    const markup = countries.map(country => showCountryList(country))
+        const markup = countries.map(country => showCountryList(country))
+         clearMarkAp();
     countryList.innerHTML = markup.join('');
-    countryInfo.innerHTML = "";
+   
     }
 
     if(countries.length === 1) {
         const cardMarcup = countries.map(country => showCountryCard(country));
-        countryList.innerHTML = "";
+        clearMarkAp();
         countryInfo.innerHTML = cardMarcup.join('');
     }
 })
     
 .catch(error => {
     Notify.failure('УПС ЗБІГІВ НЕМАЄ )))');
-    countryList.innerHTML = "";
-    countryInfo.innerHTML = "";
+ clearMarkAp();
     return error;
 })
 }
